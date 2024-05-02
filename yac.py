@@ -498,7 +498,7 @@ def NSGA2(E, V, max_gen, max_pop, pop_size, divd, t):
     #EN: Mate best chromosome with divd-1 chromosomes 
     #FR: Accoupler le meilleur chromosome avec divd-1 chromosomes.
     elite_offspring.clear()
-    for i in range(1,divd):
+    for i in range(1, len(population_elite)):
       elite_offspring.append(croisement(population_elite[0], population_elite[i], max_pop))
 
     #EN: Only take unique offspring in case there are twins
